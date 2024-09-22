@@ -1,3 +1,4 @@
+#define BUFFER_IMPLEMENTATION
 #include "buffer.h"
 #include <assert.h>
 #include <stdio.h>
@@ -27,4 +28,5 @@ int main(void) {
   assert(buf.capacity >= 16);
 
   buffer_destroy(buf);
+  return 0;
 }

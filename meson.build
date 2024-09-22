@@ -3,5 +3,7 @@ project('libs', 'c',
   license: 'Apache-2.0',
   version: '0.1.0')
 
-executable('buffer', 'examples/buffer.c',
-  include_directories: '.')
+foreach example : ['buffer', 'vec']
+  executable(example, 'examples/' + example + '.c',
+    include_directories: '.')
+endforeach
