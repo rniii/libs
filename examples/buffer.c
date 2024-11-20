@@ -24,7 +24,7 @@ int main(void) {
   buffer_reserve(&buf, 32);
   assert(buf.capacity >= buf.length + 32);
 
-  buffer_shrink_to(&buf, 16);
+  buffer_shrink(&buf, 16);
   assert(buf.capacity >= 16);
 
   buffer_destroy(buf);
